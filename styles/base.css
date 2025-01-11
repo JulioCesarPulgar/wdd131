@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
@@ -54,7 +54,6 @@ main {
     padding: 0 1rem;
 }
 
-/* Main Content Styles */
 .content {
     flex: 3;
 }
@@ -62,7 +61,7 @@ main {
 .content .card {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     padding: 1.5rem;
     max-width: 900px;
@@ -88,30 +87,18 @@ main {
     height: auto;
 }
 
-.content .about-me p {
-    flex: 1;
-}
-
-.content .about-me .location {
-    margin-top: 2rem;
-}
-
 aside.resources {
     flex: 1;
     background-color: #eef6ff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 aside.resources h2 {
     color: #0049b0;
     text-align: center;
     margin-bottom: 1rem;
-}
-
-aside.resources ul {
-    list-style: none;
 }
 
 aside.resources ul li a {
@@ -149,9 +136,5 @@ footer {
     .content .about-me .content {
         flex-direction: column;
         align-items: center;
-    }
-
-    .content .card {
-        padding: 1rem;
     }
 }

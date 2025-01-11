@@ -1,12 +1,21 @@
-// Obtén el año actual y colócalo en el span con id="currentyear"
 document.addEventListener("DOMContentLoaded", () => {
-    const yearSpan = document.getElementById('currentyear');
-    const lastModified = document.getElementById('lastModified');
+    const updateDateInfo = (yearElementId, modifiedElementId) => {
+        const yearSpan = document.getElementById(yearElementId);
+        const lastModified = document.getElementById(modifiedElementId);
 
-    // Año actual
-    const currentYear = new Date().getFullYear();
-    yearSpan.textContent = currentYear;
+        const currentYear = new Date().getFullYear();
+        if (yearSpan) yearSpan.textContent = currentYear;
 
-    // Fecha de última modificación
-    lastModified.textContent = `Last Modified: ${document.lastModified}`;
+        if (lastModified) {
+            const lang = document.documentElement.lang || 'en-US';
+            const formattedDate = new Intl.DateTimeFormat(lang, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+            }).format(new Date(document.lastModified));
+            lastModified.textContent = `Last Modified: ${formattedDate}`;
+        }
+    };
+
+    updateDateInfo('currentyear', 'lastModified');
 });
