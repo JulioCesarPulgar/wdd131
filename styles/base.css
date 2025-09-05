@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Story+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Story+Script&display=swap");
 header {
   text-align: center;
   margin-bottom: 2rem;
@@ -22,7 +22,7 @@ nav a:hover {
   text-decoration: none;
 }
 body {
-  font-family: 'Story Script', cursive, Arial, Helvetica, sans-serif;
+  font-family: "Story Script", cursive, Arial, Helvetica, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0 1rem;
@@ -62,7 +62,7 @@ body code {
   display: block;
   text-align: center;
   margin-bottom: 1rem;
-  font-family: 'Arimo', Arial, Helvetica, sans-serif;
+  font-family: "Arimo", Arial, Helvetica, sans-serif;
   font-size: 2rem;
 }
 footer {
@@ -82,7 +82,7 @@ main {
   padding: 1rem;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
 section.card {
@@ -93,5 +93,5 @@ section.card {
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
