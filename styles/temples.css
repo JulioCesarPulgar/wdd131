@@ -92,3 +92,18 @@ footer {
 footer p {
   margin: 0.2rem 0;
 }
+
+@media (min-width: 700px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    display: flex !important;
+  }
+  #menuBtn {
+    display: none;
+  }
+  .album-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
