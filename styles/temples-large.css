@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Story+Script&display=swap");
+nav {
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  display: flex !important;
+}
+#menuBtn {
+  display: none;
+}
+.album-grid {
+  grid-template-columns: repeat(3, 1fr);
+}

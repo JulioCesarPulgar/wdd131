@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temple Album – Julio Cesar Pulgar</title>
+    <meta
+      name="description"
+      content="Temple Album, Julio Cesar Pulgar, Responsive, CSS Grid, Flexbox, JavaScript"
+    />
+    <meta name="author" content="Julio Cesar Pulgar" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/temples.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/temples-large.css"
+      media="(min-width: 700px)"
+    />
+    <script src="./scripts/temples.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Temple Album</h1>
+      <button id="menuBtn" aria-label="Open navigation menu">&#9776;</button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="#old">Old</a>
+        <a href="#new">New</a>
+        <a href="#large">Large</a>
+        <a href="#small">Small</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Temples Around the World</h2>
+      <div class="album-grid">
+        <figure>
+          <img
+            src="./images/caracas_venezuela_temple.jpg"
+            alt="Caracas, Venezuela - Temple"
+          />
+          <figcaption>Caracas, Venezuela - Temple</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./images/auckland_new_zealand_temple.jpg"
+            alt="Auckland, New Zealand - Temple"
+          />
+          <figcaption>Auckland, New Zealand - Temple</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./images/barranquilla_columbia_temple.jpg"
+            alt="Barranquilla, Columbia - Temple"
+          />
+          <figcaption>Barranquilla, Columbia - Temple</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./images/belem_brazil_temple.jpg"
+            alt="Belem, Brazil - Temple"
+          />
+          <figcaption>Belem, Brazil - Temple</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./images/bern_switzerland_temple.jpg"
+            alt="Bern, Switzerland - Temple"
+          />
+          <figcaption>Bern, Switzerland - Temple</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./images/brasilia_brazil_temple.jpg"
+            alt="Brasilia, Brazil - Temple"
+          />
+          <figcaption>Brasilia, Brazil - Temple</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./images/coban_guatemala_temple.jpg"
+            alt="Coban,Guatemala - Temple"
+          />
+          <figcaption>Coban,Guatemala - Temple</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./images/colonia_juarez_mexico_temple.jpg"
+            alt="Colonia Juarez, Mexico - Temple"
+          />
+          <figcaption>Colonia Juarez, Mexico - Temple</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./images/concepcion_chile_temple.jpg"
+            alt="Concepcion, Chile - Temple"
+          />
+          <figcaption>Concepcion, Chile - Temple</figcaption>
+        </figure>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Julio Cesar Pulgar, Venezuela</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
