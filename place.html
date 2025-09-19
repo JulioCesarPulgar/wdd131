@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Venezuela, travel, culture, tourism, South America, Angel Falls, beaches, food, music"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Discover Venezuela – Julio Cesar Pulgar</title>
     <meta
       name="description"
@@ -19,11 +25,19 @@
     />
     <meta property="og:image" content="./images/venezuela-hero-small.webp" />
     <meta property="og:type" content="website" />
+    <!-- Favicons for multiple devices -->
     <link
       rel="icon"
       href="./images/venezuela-hero-small.webp"
       type="image/webp"
     />
+    <link
+      rel="icon"
+      href="./images/profile.jpg"
+      type="image/jpeg"
+      sizes="32x32"
+    />
+    <link rel="apple-touch-icon" href="./images/profile.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,10 +48,10 @@
     <script src="./scripts/place.js" defer></script>
   </head>
   <body>
-    <header>
+    <header role="banner">
       <h1 tabindex="0">Discover Venezuela</h1>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
+      <nav aria-label="Main navigation" role="navigation">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="temples.html">Temples Album</a>
         <a
           href="https://en.wikipedia.org/wiki/Venezuela"
@@ -53,8 +67,8 @@
         >
       </nav>
     </header>
-    <main>
-      <section class="hero">
+    <main role="main">
+      <section class="hero" aria-label="Venezuela landscape">
         <picture>
           <source
             srcset="./images/venezuela-hero-large.webp"
@@ -64,6 +78,9 @@
           <img
             src="./images/venezuela-hero-small.webp"
             alt="Venezuela landscape"
+            loading="lazy"
+            width="1000"
+            height="400"
           />
         </picture>
         <div class="hero-text">
@@ -75,12 +92,18 @@
           </p>
         </div>
       </section>
-      <section class="weather">
+      <section class="weather" aria-label="Current weather in Venezuela">
         <h2 id="weather-heading">
           Weather
-          <span class="weather-icon-mobile"
-            ><img src="./images/weather.svg" alt="Weather icon"
-          /></span>
+          <span class="weather-icon-mobile">
+            <img
+              src="./images/weather.svg"
+              alt="Weather icon"
+              loading="lazy"
+              width="32"
+              height="32"
+            />
+          </span>
         </h2>
         <div class="weather-details">
           <p>Temperature: <span id="temp">30</span>°C</p>
@@ -88,7 +111,7 @@
           <p>Wind Chill: <span id="windchill">N/A</span></p>
         </div>
       </section>
-      <section class="info">
+      <section class="info" aria-label="About Venezuela">
         <h2>About Venezuela</h2>
         <p>
           Venezuela is a country in northern South America, famous for its
@@ -96,7 +119,7 @@
           world—and its Caribbean coastline. Enjoy vibrant culture, delicious
           arepas, and the warmth of its people.
         </p>
-        <section class="culture">
+        <section class="culture" aria-label="Culture and Traditions">
           <h2>Culture & Traditions</h2>
           <ul>
             <li><strong>Food:</strong> Arepas, pabellón criollo, cachapas</li>
@@ -110,9 +133,10 @@
         </section>
       </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
       <p>&copy; <span id="currentyear"></span> Julio Cesar Pulgar, Venezuela</p>
       <p id="lastModified"></p>
+      </section>
     </footer>
   </body>
 </html>
