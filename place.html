@@ -25,7 +25,6 @@
     />
     <meta property="og:image" content="./images/venezuela-hero-small.webp" />
     <meta property="og:type" content="website" />
-    <!-- Favicons for multiple devices -->
     <link
       rel="icon"
       href="./images/venezuela-hero-small.webp"
@@ -51,18 +50,20 @@
     <header role="banner">
       <h1 tabindex="0">Discover Venezuela</h1>
       <nav aria-label="Main navigation" role="navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="temples.html">Temples Album</a>
+        <a href="index.html" aria-current="page" tabindex="0">Home</a>
+        <a href="temples.html" tabindex="0">Temples Album</a>
         <a
           href="https://en.wikipedia.org/wiki/Venezuela"
           target="_blank"
           rel="noopener"
+          tabindex="0"
           >Wikipedia</a
         >
         <a
           href="https://www.lonelyplanet.com/venezuela"
           target="_blank"
           rel="noopener"
+          tabindex="0"
           >Travel Guide</a
         >
       </nav>
@@ -92,25 +93,38 @@
           </p>
         </div>
       </section>
-      <section class="weather" aria-label="Current weather in Venezuela">
-        <h2 id="weather-heading">
-          Weather
-          <span class="weather-icon-mobile">
-            <img
-              src="./images/weather.svg"
-              alt="Weather icon"
-              loading="lazy"
-              width="32"
-              height="32"
-            />
-          </span>
-        </h2>
-        <div class="weather-details">
-          <p>Temperature: <span id="temp">30</span>°C</p>
-          <p>Wind: <span id="wind">8</span> km/h</p>
-          <p>Wind Chill: <span id="windchill">N/A</span></p>
-        </div>
-      </section>
+      <div class="info-grid-container">
+        <section
+          class="venezuela-data"
+          aria-label="General data about Venezuela"
+        >
+          <h2>
+            Venezuela Data
+            <span class="data-icon" aria-label="data icon">📊</span>
+          </h2>
+          <div class="venezuela-details" id="venezuela-details">
+            <p>Population: <span id="population">28,704,954</span></p>
+            <p>Capital: <span id="capital">Caracas</span></p>
+            <p>Official Language: <span id="language">Spanish</span></p>
+            <p>Currency: <span id="currency">Venezuelan Bolívar (VES)</span></p>
+          </div>
+        </section>
+        <section class="weather" aria-label="Current weather in Venezuela">
+          <h2>
+            Weather <span class="weather-icon" aria-label="weather icon"></span>
+          </h2>
+          <div class="weather-details" id="weather-details">
+            <p>Temperature: <span id="temperature">30</span>°C</p>
+            <p>Wind Speed: <span id="windSpeed">8</span> km/h</p>
+            <p>Wind Chill: <span id="windChill">N/A</span></p>
+          </div>
+          <img
+            src="images/weather.svg"
+            alt="Weather icon"
+            class="weather-svg animated-weather"
+          />
+        </section>
+      </div>
       <section class="info" aria-label="About Venezuela">
         <h2>About Venezuela</h2>
         <p>
@@ -131,12 +145,41 @@
             <li><strong>Sports:</strong> Baseball, soccer</li>
           </ul>
         </section>
+        <section class="places" aria-label="Featured Places">
+          <h2>Featured Places</h2>
+          <div class="places-list">
+            <div class="place-card">
+              <img
+                src="images/Angel-Falls-waterfall-world-Rio-Churun-Venezuela.webp"
+                alt="Angel Falls"
+                loading="lazy"
+              />
+              <h3>Angel Falls</h3>
+              <p>
+                The world's tallest waterfall, located in Canaima National Park.
+              </p>
+            </div>
+            <div class="place-card">
+              <img src="images/R.jpeg" alt="Caribbean Beach" loading="lazy" />
+              <h3>Caribbean Beaches</h3>
+              <p>Relax on Venezuela's stunning Caribbean coastline.</p>
+            </div>
+            <div class="place-card">
+              <img
+                src="images/him-compressed.jpg"
+                alt="Andes Mountains"
+                loading="lazy"
+              />
+              <h3>Andes Mountains</h3>
+              <p>Explore the breathtaking Andean landscapes and towns.</p>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
     <footer role="contentinfo">
-      <p>&copy; <span id="currentyear"></span> Julio Cesar Pulgar, Venezuela</p>
+      <p>&copy; <span id="year"></span> Julio Cesar Pulgar, Venezuela</p>
       <p id="lastModified"></p>
-      </section>
     </footer>
   </body>
 </html>

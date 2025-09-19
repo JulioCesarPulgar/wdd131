@@ -136,6 +136,125 @@ footer {
 footer p {
   margin: 0.2rem 0;
 }
+.weather-svg {
+  width: var(--weather-icon-size);
+  height: var(--weather-icon-size);
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.animated-weather {
+  animation: weather-bounce 2s infinite alternate;
+}
+@keyframes weather-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.places-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.place-card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  width: 220px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.place-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.place-card:hover,
+.place-card:focus {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  outline: 2px solid var(--primary);
+}
+.venezuela-data {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--card-shadow);
+}
+.venezuela-data h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--primary);
+  position: relative;
+}
+.data-icon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+.venezuela-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.info-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  position: relative;
+  background: url("images/city-caracas.jpg") center/cover no-repeat;
+}
+.venezuela-data,
+.weather {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+  box-shadow: var(--card-shadow);
+}
+@media (min-width: 900px) {
+  .info-grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "venezuela-data ."
+      ". weather";
+    height: auto;
+    min-height: 500px;
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    position: relative;
+    gap: 2rem;
+  }
+  .venezuela-data {
+    grid-area: venezuela-data;
+    align-self: start;
+    justify-self: start;
+    margin: 0;
+    max-width: 350px;
+  }
+  .weather {
+    grid-area: weather;
+    align-self: end;
+    justify-self: end;
+    margin: 0;
+    max-width: 350px;
+  }
+}
 @media (min-width: 700px) {
   .hero {
     grid-template-columns: 1fr 1fr;
