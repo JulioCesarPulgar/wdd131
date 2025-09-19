@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Venezuela – Julio Cesar Pulgar</title>
+    <meta
+      name="description"
+      content="Discover Venezuela: culture, weather, and beautiful places. Responsive design, CSS Grid, Flexbox, JavaScript."
+    />
+    <meta name="author" content="Julio Cesar Pulgar" />
+    <meta
+      property="og:title"
+      content="Discover Venezuela – Julio Cesar Pulgar"
+    />
+    <meta
+      property="og:description"
+      content="Discover Venezuela: culture, weather, and beautiful places."
+    />
+    <meta property="og:image" content="./images/venezuela-hero-small.webp" />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="./images/venezuela-hero-small.webp"
+      type="image/webp"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/place.css" />
+    <script src="./scripts/place.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 tabindex="0">Discover Venezuela</h1>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="temples.html">Temples Album</a>
+        <a
+          href="https://en.wikipedia.org/wiki/Venezuela"
+          target="_blank"
+          rel="noopener"
+          >Wikipedia</a
+        >
+        <a
+          href="https://www.lonelyplanet.com/venezuela"
+          target="_blank"
+          rel="noopener"
+          >Travel Guide</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            srcset="./images/venezuela-hero-large.webp"
+            media="(min-width: 700px)"
+            type="image/webp"
+          />
+          <img
+            src="./images/venezuela-hero-small.webp"
+            alt="Venezuela landscape"
+          />
+        </picture>
+        <div class="hero-text">
+          <h2>Welcome to Venezuela</h2>
+          <p>
+            Discover Venezuela: Caribbean beaches, the Andes mountains, Angel
+            Falls, vibrant cities, and a rich culture. Adventure and beauty
+            await you!
+          </p>
+        </div>
+      </section>
+      <section class="weather">
+        <h2 id="weather-heading">
+          Weather
+          <span class="weather-icon-mobile"
+            ><img src="./images/weather.svg" alt="Weather icon"
+          /></span>
+        </h2>
+        <div class="weather-details">
+          <p>Temperature: <span id="temp">30</span>°C</p>
+          <p>Wind: <span id="wind">8</span> km/h</p>
+          <p>Wind Chill: <span id="windchill">N/A</span></p>
+        </div>
+      </section>
+      <section class="info">
+        <h2>About Venezuela</h2>
+        <p>
+          Venezuela is a country in northern South America, famous for its
+          natural wonders like Angel Falls—the tallest waterfall in the
+          world—and its Caribbean coastline. Enjoy vibrant culture, delicious
+          arepas, and the warmth of its people.
+        </p>
+        <section class="culture">
+          <h2>Culture & Traditions</h2>
+          <ul>
+            <li><strong>Food:</strong> Arepas, pabellón criollo, cachapas</li>
+            <li><strong>Music:</strong> Joropo, salsa, gaita zuliana</li>
+            <li>
+              <strong>Festivals:</strong> Carnival, Feria de la Chinita,
+              Christmas celebrations
+            </li>
+            <li><strong>Sports:</strong> Baseball, soccer</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Julio Cesar Pulgar, Venezuela</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
