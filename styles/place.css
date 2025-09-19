@@ -31,30 +31,32 @@ h1 {
   color: var(--primary);
   margin: 0;
   letter-spacing: 2px;
-  nav {
-    background: var(--nav-bg);
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0.5rem 0;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-  nav a {
-    color: var(--nav-link);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    transition: background 0.3s, color 0.3s;
-  }
-  nav a:hover,
-  nav a:focus {
-    background: var(--nav-link-hover);
-    color: #fff;
-    outline: none;
-  }
 }
+
+nav {
+  background: var(--nav-bg);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+nav a {
+  color: var(--nav-link);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+nav a:hover,
+nav a:focus {
+  background: var(--nav-link-hover);
+  color: #fff;
+  outline: none;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr;
@@ -108,20 +110,20 @@ h1 {
   padding: 1.5rem;
   margin: 1.5rem 0;
   box-shadow: var(--card-shadow);
-  .culture {
-    background: var(--card-bg);
-    border-radius: var(--card-radius);
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    box-shadow: var(--card-shadow);
-  }
-  .culture ul {
-    padding-left: 1.2rem;
-  }
-  .culture li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
+}
+.culture {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--card-shadow);
+}
+.culture ul {
+  padding-left: 1.2rem;
+}
+.culture li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 footer {
   background: var(--footer-bg);
