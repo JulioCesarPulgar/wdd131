@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Plan | Digital Library of Open Access Books</title>
+    <link rel="stylesheet" href="siteplan.css" />
+    <style>
+      :root {
+        --primary-color: #2a4d69;
+        --accent-color: #f4b942;
+        --background-color: #f9f9f9;
+        --font-heading: "Merriweather", serif;
+        --font-body: "Open Sans", Arial, sans-serif;
+      }
+      body {
+        background: var(--background-color);
+        color: #222;
+        font-family: var(--font-body);
+        margin: 0;
+        padding: 0 1rem;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .logo {
+        width: 48px;
+        height: 48px;
+        background: var(--primary-color);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 2rem;
+        font-family: var(--font-heading);
+        font-weight: bold;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-heading);
+        color: var(--primary-color);
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.2em;
+      }
+      section {
+        margin-bottom: 2rem;
+        max-width: 800px;
+      }
+      .color-sample {
+        display: inline-block;
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        margin-right: 0.5em;
+        vertical-align: middle;
+        border: 2px solid #ccc;
+      }
+      .wireframes {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .wireframe {
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 1em;
+        width: 320px;
+        text-align: center;
+      }
+      .wireframe img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 0.5em;
+      }
+      @media (max-width: 700px) {
+        .wireframes {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .wireframe {
+          width: 100%;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo" title="Digital Library Logo">DL</div>
+      <div>
+        <h1>Digital Library of Open Access Books</h1>
+        <p><strong>Site Plan</strong></p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Digital Library of Open Access Books</strong></p>
+      <p>
+        This name clearly communicates the site's purpose: a curated, easily
+        accessible collection of high-quality, free-to-read books. It emphasizes
+        the open-access and educational mission, making it discoverable and
+        trustworthy for users seeking public domain or creative commons
+        literature.
+      </p>
+      <p><em>Optional domain availability:</em> openaccesslibrary.org</p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>
+        The site serves as a portal for discovering and reading open-access
+        books. It provides a searchable, filterable catalog of fiction and
+        non-fiction works, with no registration or payment required. The goal is
+        to promote universal access to knowledge and support the open-access
+        movement.
+      </p>
+    </section>
+
+    <section>
+      <h2>Scenarios</h2>
+      <ul>
+        <li>
+          How can I find free, high-quality books on a specific topic or by a
+          particular author?
+        </li>
+        <li>
+          What is open-access literature, and where do these books come from?
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Color Schema</h2>
+      <ul>
+        <li>
+          <span
+            class="color-sample"
+            style="background: var(--primary-color)"
+          ></span>
+          <strong>Primary Color:</strong> #2a4d69 — Used for headings, logo, and
+          navigation highlights.
+        </li>
+        <li>
+          <span
+            class="color-sample"
+            style="background: var(--accent-color)"
+          ></span>
+          <strong>Accent Color:</strong> #f4b942 — Used for buttons, links, and
+          call-to-action elements.
+        </li>
+        <li>
+          <span
+            class="color-sample"
+            style="background: var(--background-color)"
+          ></span>
+          <strong>Background:</strong> #f9f9f9 — Used for page background.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <ul>
+        <li>
+          <strong>Merriweather</strong> (serif) — Used for headings and logo for
+          a scholarly, trustworthy feel.
+        </li>
+        <li>
+          <strong>Open Sans</strong> (sans-serif) — Used for body text for
+          readability and modern appearance.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Wireframe</h2>
+      <div class="wireframes">
+        <div class="wireframe">
+          <h3>Mobile View</h3>
+          <p><strong>Under construction</strong></p>
+          <p>
+            Single column layout: logo, navigation, search bar, book grid,
+            footer.
+          </p>
+        </div>
+        <div class="wireframe">
+          <h3>Desktop View</h3>
+          <p><strong>Under construction</strong></p>
+          <p>
+            Multi-column layout: sidebar navigation, main content area with
+            search/filter, book grid, footer.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Wireframes are conceptual and may evolve during development.</em>
+      </p>
+    </section>
+  </body>
+</html>
