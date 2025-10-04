@@ -1,0 +1,91 @@
+/* styles for the product review form */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f7fa;
+  margin: 0;
+  color: #222;
+}
+header,
+footer {
+  background: #2a3d66;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+main {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1.5rem;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #bfc9d1;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+input[type="submit"] {
+  background: #2a3d66;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+input[type="submit"]:hover {
+  background: #1d2947;
+}
+.rating-group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+.rating-group input[type="radio"] {
+  display: none;
+}
+.rating-group label {
+  font-size: 2rem;
+  color: #bfc9d1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.rating-group input[type="radio"]:checked ~ label,
+.rating-group label:hover,
+.rating-group label:hover ~ label {
+  color: #f5b301;
+}
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+.checkbox-group input[type="checkbox"] {
+  margin-right: 0.3rem;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 1rem 0.5rem;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .rating-group label {
+    font-size: 1.5rem;
+  }
+}
