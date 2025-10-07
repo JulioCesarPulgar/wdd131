@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Library | Home</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"
+          ><span class="nav-icon" aria-label="Home">🏠</span> Home</a
+        >
+        <a href="catalog.html"
+          ><span class="nav-icon" aria-label="Books">📚</span> Catalog</a
+        >
+        <a href="blog.html"
+          ><span class="nav-icon" aria-label="Blog">�</span> Blog</a
+        >
+        <a href="admin.html" id="admin-menu-link"
+          ><span class="nav-icon" aria-label="Admin">🛡️</span> Admin Access</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section id="carousel-section">
+        <div class="carousel">
+          <div class="carousel-slide active">
+            <img src="images/library1.jpg" alt="Library 1" loading="lazy" />
+            <div class="carousel-caption">
+              Free access to thousands of books
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/library2.jpg" alt="Library 2" loading="lazy" />
+            <div class="carousel-caption">Read and share knowledge</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/library3.jpg" alt="Library 3" loading="lazy" />
+            <div class="carousel-caption">Discover authors and genres</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/library4.jpg" alt="Library 4" loading="lazy" />
+            <div class="carousel-caption">Explore new releases</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/library5.jpg" alt="Library 5" loading="lazy" />
+            <div class="carousel-caption">Join the open access movement</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/library6.jpg" alt="Library 6" loading="lazy" />
+            <div class="carousel-caption">Your digital bookshelf</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/library7.jpg" alt="Library 7" loading="lazy" />
+            <div class="carousel-caption">Read anywhere, anytime</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/library8.jpg" alt="Library 8" loading="lazy" />
+            <div class="carousel-caption">Support lifelong learning</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="images/library9.jpg" alt="Library 9" loading="lazy" />
+            <div class="carousel-caption">Share your favorite books</div>
+          </div>
+          <button class="carousel-btn prev" aria-label="Previous">
+            &#10094;
+          </button>
+          <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+        </div>
+      </section>
+      <section id="info-section">
+        <h1>Welcome to the Digital Library</h1>
+        <p>
+          Explore a collection of open access books. Find relevant information
+          about literature, authors, and the open access movement.
+        </p>
+        <div class="info-grid">
+          <div class="info-card">
+            <h2>
+              <span class="info-icon" aria-label="Open Access">🌐</span> What is
+              Open Access?
+            </h2>
+            <p>
+              Books available for everyone, free of charge and restrictions.
+            </p>
+          </div>
+          <div class="info-card">
+            <h2>
+              <span class="info-icon" aria-label="User">👤</span> For Users
+            </h2>
+            <p>
+              Browse and read books without registration. Access the public
+              catalog.
+            </p>
+          </div>
+          <div class="info-card">
+            <h2>
+              <span class="info-icon" aria-label="Admin">🛡️</span> For
+              Administrators
+            </h2>
+            <p>
+              Manage the catalog: add, edit, and delete books after logging in.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="public-books-section">
+        <h2>
+          <span class="section-icon" aria-label="Featured">⭐</span> Featured
+          Books
+        </h2>
+        <div id="public-books-list"></div>
+      </section>
+      <!-- Admin access now only available via menu link to admin.html -->
+      <section id="about-section">
+        <h2>
+          <span class="section-icon" aria-label="About">📖</span> About Us
+        </h2>
+        <p>
+          Digital Library is dedicated to sharing open access books and
+          knowledge worldwide. Our mission is to make literature, science, and
+          education accessible to everyone, everywhere.
+        </p>
+      </section>
+      <section id="how-section">
+        <h2>
+          <span class="section-icon" aria-label="How">💡</span> How It Works
+        </h2>
+        <ul>
+          <li>
+            Browse our catalog of open access books by genre, author, or title.
+          </li>
+          <li>Read books online or download the PDF for offline access.</li>
+          <li>
+            Administrators can add, edit, and manage the catalog securely.
+          </li>
+        </ul>
+      </section>
+      <section id="partners-section">
+        <h2>
+          <span class="section-icon" aria-label="Partners">🤝</span> Our
+          Partners
+        </h2>
+        <ul>
+          <li>
+            Inspired by Open Library, Project Gutenberg, Springer Open, Wiley
+            Online Library, and more.
+          </li>
+          <li>
+            We collaborate with educational institutions and publishers to
+            expand our collection.
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2025 Biblioteca Digital |
+        <a href="blog.html">Blog</a>
+      </p>
+    </footer>
+    <script src="scripts/login.js"></script>
+  </body>
+</html>

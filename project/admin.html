@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Digital Library</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"
+          ><span class="nav-icon" aria-label="Home">🏠</span> Home</a
+        >
+        <a href="catalog.html"
+          ><span class="nav-icon" aria-label="Books">📚</span> Catalog</a
+        >
+        <a href="blog.html"
+          ><span class="nav-icon" aria-label="Blog">�</span> Blog</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section id="admin-login-section">
+        <h2>
+          <span class="section-icon" aria-label="Admin">🛡️</span> Admin Access
+        </h2>
+        <form id="admin-login-form" autocomplete="off">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            autocomplete="off"
+          />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            autocomplete="off"
+          />
+          <button type="submit">
+            <span class="nav-icon" aria-label="Login">🔒</span> Login
+          </button>
+        </form>
+        <div id="admin-login-message"></div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Digital Library | <a href="blog.html">Blog</a></p>
+    </footer>
+    <script src="scripts/admin-login.js"></script>
+  </body>
+</html>

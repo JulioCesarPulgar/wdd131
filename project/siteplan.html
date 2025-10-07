@@ -102,11 +102,20 @@
   </head>
   <body>
     <header>
-      <div class="logo" title="Digital Library Logo">DL</div>
-      <div>
-        <h1>Digital Library of Open Access Books</h1>
-        <p><strong>Site Plan</strong></p>
-      </div>
+      <nav>
+        <a href="index.html"
+          ><span class="nav-icon" aria-label="Home">🏠</span> Home</a
+        >
+        <a href="catalog.html"
+          ><span class="nav-icon" aria-label="Books">📚</span> Catalog</a
+        >
+        <a href="blog.html"
+          ><span class="nav-icon" aria-label="Blog">�</span> Blog</a
+        >
+        <button id="logout-btn" class="btn" style="margin-left: auto">
+          <span class="nav-icon" aria-label="Logout">🚪</span> Logout
+        </button>
+      </nav>
     </header>
 
     <section>
@@ -213,5 +222,20 @@
         <em>Wireframes are conceptual and may evolve during development.</em>
       </p>
     </section>
+    <script>
+      // Protect page: only admin can access
+      if (sessionStorage.getItem("adminAuth") !== "true") {
+        localStorage.setItem("lastPage", "siteplan.html");
+        window.location.href = "index.html";
+      }
+      // Logout button
+      document
+        .getElementById("logout-btn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("loggedUser");
+          sessionStorage.removeItem("adminAuth");
+          window.location.href = "index.html";
+        });
+    </script>
   </body>
 </html>

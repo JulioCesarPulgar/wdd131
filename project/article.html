@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article | Digital Library</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"
+          ><span class="nav-icon" aria-label="Home">🏠</span> Home</a
+        >
+        <a href="catalog.html"
+          ><span class="nav-icon" aria-label="Books">📚</span> Catalog</a
+        >
+        <a href="blog.html"
+          ><span class="nav-icon" aria-label="Blog">📝</span> Blog</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section id="article-section">
+        <h1 id="article-title">Article Title</h1>
+        <p class="blog-meta" id="article-meta">by Author • Category</p>
+        <img
+          id="article-image"
+          src=""
+          alt="Article Image"
+          loading="lazy"
+          style="max-width: 400px; display: block; margin-bottom: 1em"
+        />
+        <div id="article-content">Full article content goes here...</div>
+        <section id="article-rating">
+          <h2>Rate this article</h2>
+          <div id="rating-stars">
+            <!-- Stars will be rendered by JS -->
+          </div>
+          <div id="rating-feedback"></div>
+        </section>
+        <section id="article-comments">
+          <h2>Comments</h2>
+          <form id="comment-form">
+            <textarea
+              id="comment-text"
+              rows="2"
+              required
+              placeholder="Leave a comment..."
+            ></textarea>
+            <button type="submit">Submit</button>
+          </form>
+          <ul id="comments-list"></ul>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Digital Library | <a href="blog.html">Blog</a></p>
+    </footer>
+    <script src="scripts/article.js"></script>
+  </body>
+</html>

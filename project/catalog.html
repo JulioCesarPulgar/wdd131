@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Catalog | Digital Library</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"
+          ><span class="nav-icon" aria-label="Home">🏠</span> Home</a
+        >
+        <a href="catalog.html"
+          ><span class="nav-icon" aria-label="Books">📚</span> Catalog</a
+        >
+        <a href="blog.html"
+          ><span class="nav-icon" aria-label="Blog">�</span> Blog</a
+        >
+        <button id="logout-btn" class="btn" style="margin-left: auto">
+          <span class="nav-icon" aria-label="Logout">🚪</span> Logout
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section id="books-section">
+        <h1>Book Catalog</h1>
+        <div class="catalog-controls">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search by title or author"
+            aria-label="Search books"
+          />
+          <select id="genre-filter" aria-label="Filter by genre">
+            <option value="">All genres</option>
+          </select>
+          <button id="add-book-btn">
+            <span class="nav-icon" aria-label="Add">➕</span> Add Book
+          </button>
+        </div>
+        <div id="books-list"></div>
+        <div id="catalog-feedback" aria-live="polite"></div>
+      </section>
+      <section id="book-form-section" style="display: none">
+        <h2 id="form-title">Add/Edit Book</h2>
+        <form id="book-form">
+          <input type="hidden" id="book-id" />
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" required />
+          <label for="genre">Genre:</label>
+          <input
+            type="text"
+            id="genre"
+            name="genre"
+            required
+            list="genre-list"
+          />
+          <datalist id="genre-list">
+            <option value="Fiction"></option>
+            <option value="Non-fiction"></option>
+            <option value="Science"></option>
+            <option value="History"></option>
+            <option value="Biography"></option>
+            <option value="Children"></option>
+            <option value="Fantasy"></option>
+            <option value="Mystery"></option>
+            <option value="Romance"></option>
+            <option value="Other"></option>
+          </datalist>
+
+          <label for="year">Year:</label>
+          <input type="number" id="year" name="year" min="1000" max="2100" />
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="2"></textarea>
+          <label for="pdf">PDF URL:</label>
+          <input type="url" id="pdf" name="pdf" required />
+          <label for="cover">Cover URL:</label>
+          <input type="url" id="cover" name="cover" required />
+          <button type="submit">Save</button>
+          <button type="button" id="cancel-btn">Cancel</button>
+        </form>
+      </section>
+      <section id="pdf-preview-section" style="display: none">
+        <h2>PDF Preview</h2>
+        <iframe
+          id="pdf-preview"
+          width="100%"
+          height="500"
+          loading="lazy"
+        ></iframe>
+        <button type="button" id="close-preview-btn">Close Preview</button>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2025 Digital Library |
+        <a href="blog.html">Blog</a>
+      </p>
+    </footer>
+    <script src="scripts/books.js"></script>
+    <script>
+      // Protect page: only admin can access
+      if (sessionStorage.getItem("adminAuth") !== "true") {
+        localStorage.setItem("lastPage", "catalog.html");
+        window.location.href = "index.html";
+      }
+      // Logout button
+      document
+        .getElementById("logout-btn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("loggedUser");
+          sessionStorage.removeItem("adminAuth");
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>
