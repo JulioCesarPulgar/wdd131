@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Login | Digital Library</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <meta name="robots" content="noindex, nofollow" />
   </head>
   <body>
     <header>
@@ -16,38 +17,71 @@
           ><span class="nav-icon" aria-label="Books">📚</span> Catalog</a
         >
         <a href="blog.html"
-          ><span class="nav-icon" aria-label="Blog">�</span> Blog</a
+          ><span class="nav-icon" aria-label="Blog">📝</span> Blog</a
         >
       </nav>
     </header>
     <main>
-      <section id="admin-login-section">
-        <h2>
-          <span class="section-icon" aria-label="Admin">🛡️</span> Admin Access
-        </h2>
-        <form id="admin-login-form" autocomplete="off">
-          <label for="username">Username:</label>
+      <form id="admin-login-form" autocomplete="off">
+        <div class="form-group">
+          <label for="username">
+            <span class="label-icon">👤</span> Username
+          </label>
           <input
             type="text"
             id="username"
             name="username"
             required
             autocomplete="off"
+            minlength="3"
+            aria-describedby="username-error"
           />
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            autocomplete="off"
-          />
-          <button type="submit">
-            <span class="nav-icon" aria-label="Login">🔒</span> Login
-          </button>
-        </form>
-        <div id="admin-login-message"></div>
-      </section>
+          <span id="username-error" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">
+            <span class="label-icon">🔒</span> Password
+          </label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              autocomplete="off"
+              minlength="6"
+              aria-describedby="password-error"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Show password"
+            >
+              👁️
+            </button>
+          </div>
+          <span id="password-error" class="error-message"></span>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" id="remember-me" />
+            <span>Remember me</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <span class="btn-icon">🔓</span> Login
+          <span class="btn-loader" style="display: none">...</span>
+        </button>
+      </form>
+
+      <div id="admin-login-message" role="alert" aria-live="assertive"></div>
+
+      <div class="login-help">
+        <a href="reset-password.html">Forgot password?</a>
+      </div>
     </main>
     <footer>
       <p>&copy; 2025 Digital Library</p>

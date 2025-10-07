@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog | Digital Library</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <meta
+      name="description"
+      content="Read articles from authors about writing, inspiration, and the literary world."
+    />
+    <link rel="canonical" href="https://yourdomain.com/blog.html" />
   </head>
   <body>
     <header>
@@ -24,6 +29,16 @@
       </nav>
     </header>
     <main>
+      <div class="blog-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="inspiration">
+          Inspiration
+        </button>
+        <button class="filter-btn" data-category="craft">Craft</button>
+        <button class="filter-btn" data-category="technology">
+          Technology
+        </button>
+      </div>
       <section class="blog-hero">
         <h1>Authors' Corner</h1>
         <p class="blog-subtitle">
@@ -241,6 +256,15 @@
           </div>
         </article>
       </section>
+      <nav class="pagination" aria-label="Blog pagination">
+        <button class="page-btn" data-page="prev">← Previous</button>
+        <span class="page-numbers">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+        </span>
+        <button class="page-btn" data-page="next">Next →</button>
+      </nav>
     </main>
     <footer>
       <p>&copy; 2025 Digital Library</p>

@@ -3,81 +3,228 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Library | Home</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Digital Library | Free Open Access Books Online</title>
+    <meta
+      name="description"
+      content="Explore thousands of free open access books in our digital library. Read online without registration, discover authors, literary genres and new releases."
+    />
+    <meta
+      name="keywords"
+      content="digital library, free books, open access, online books, free literature, ebooks, read online"
+    />
+    <meta name="author" content="Digital Library" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta
+      property="og:title"
+      content="Digital Library | Free Open Access Books"
+    />
+    <meta
+      property="og:description"
+      content="Access thousands of free books. Read, share and discover knowledge without restrictions."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/images/og-image.jpg"
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://yourdomain.com/" />
+    <meta name="twitter:title" content="Digital Library | Free Books Online" />
+    <meta
+      name="twitter:description"
+      content="Thousands of open access books available for you. Read free, no registration required."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourdomain.com/images/twitter-image.jpg"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Library",
+        "name": "Digital Library",
+        "description": "Digital library with open access to thousands of free books",
+        "url": "https://yourdomain.com",
+        "logo": "https://yourdomain.com/images/logo.png",
+        "sameAs": [
+          "https://facebook.com/yourlibrary",
+          "https://twitter.com/yourlibrary",
+          "https://instagram.com/yourlibrary"
+        ],
+        "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Book Catalog",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Book",
+                "name": "Open Access Books"
+              },
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="index.html"
-          ><span class="nav-icon" aria-label="Home">🏠</span> Home</a
-        >
-        <a href="catalog.html"
-          ><span class="nav-icon" aria-label="Books">📚</span> Catalog</a
-        >
-        <a href="blog.html"
-          ><span class="nav-icon" aria-label="Blog">📝</span> Blog</a
-        >
-        <a href="admin.html" id="admin-menu-link"
-          ><span class="nav-icon" aria-label="Admin">🛡️</span> Admin Access</a
-        >
+    <header role="banner">
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">
+          <span class="nav-icon" aria-label="Home">🏠</span> Home
+        </a>
+        <a href="catalog.html">
+          <span class="nav-icon" aria-label="Books">📚</span> Catalog
+        </a>
+        <a href="blog.html">
+          <span class="nav-icon" aria-label="Blog">📝</span> Blog
+        </a>
+        <a href="admin.html" id="admin-menu-link">
+          <span class="nav-icon" aria-label="Admin">🛡️</span> Admin Access
+        </a>
       </nav>
     </header>
-    <main>
-      <section id="carousel-section">
+
+    <main role="main">
+      <section id="carousel-section" aria-label="Featured images carousel">
         <div class="carousel">
           <div class="carousel-slide active">
-            <img src="images/library1.jpg" alt="Library 1" loading="lazy" />
+            <img
+              src="images/library1.jpg"
+              alt="Digital library with free access to thousands of books"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">
               Free access to thousands of books
             </div>
           </div>
           <div class="carousel-slide">
-            <img src="images/library2.jpg" alt="Library 2" loading="lazy" />
+            <img
+              src="images/library2.jpg"
+              alt="Community of readers sharing knowledge"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">Read and share knowledge</div>
           </div>
           <div class="carousel-slide">
-            <img src="images/library3.jpg" alt="Library 3" loading="lazy" />
+            <img
+              src="images/library3.jpg"
+              alt="Explore diverse authors and literary genres"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">Discover authors and genres</div>
           </div>
           <div class="carousel-slide">
-            <img src="images/library4.jpg" alt="Library 4" loading="lazy" />
+            <img
+              src="images/library4.jpg"
+              alt="New releases and recent books"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">Explore new releases</div>
           </div>
           <div class="carousel-slide">
-            <img src="images/library5.jpg" alt="Library 5" loading="lazy" />
+            <img
+              src="images/library5.jpg"
+              alt="Open access movement to knowledge"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">Join the open access movement</div>
           </div>
           <div class="carousel-slide">
-            <img src="images/library6.jpg" alt="Library 6" loading="lazy" />
+            <img
+              src="images/library6.jpg"
+              alt="Your personalized digital bookshelf"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">Your digital bookshelf</div>
           </div>
           <div class="carousel-slide">
-            <img src="images/library7.jpg" alt="Library 7" loading="lazy" />
+            <img
+              src="images/library7.jpg"
+              alt="Read anywhere anytime"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">Read anywhere, anytime</div>
           </div>
           <div class="carousel-slide">
-            <img src="images/library8.jpg" alt="Library 8" loading="lazy" />
+            <img
+              src="images/library8.jpg"
+              alt="Lifelong learning with free books"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">Support lifelong learning</div>
           </div>
           <div class="carousel-slide">
-            <img src="images/library9.jpg" alt="Library 9" loading="lazy" />
+            <img
+              src="images/library9.jpg"
+              alt="Share your favorite books with the community"
+              loading="lazy"
+              width="1200"
+              height="600"
+            />
             <div class="carousel-caption">Share your favorite books</div>
           </div>
-          <button class="carousel-btn prev" aria-label="Previous">
+          <button class="carousel-btn prev" aria-label="Previous image">
             &#10094;
           </button>
-          <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+          <button class="carousel-btn next" aria-label="Next image">
+            &#10095;
+          </button>
         </div>
       </section>
-      <section id="info-section">
-        <h1>Welcome to the Digital Library</h1>
+
+      <section id="info-section" aria-labelledby="welcome-heading">
+        <h1 id="welcome-heading">Welcome to the Digital Library</h1>
         <p>
-          Explore a collection of open access books. Find relevant information
-          about literature, authors, and the open access movement.
+          Explore our collection of open access books. Find relevant information
+          about literature, featured authors, and the open access movement to
+          knowledge.
         </p>
         <div class="info-grid">
-          <div class="info-card">
+          <article class="info-card">
             <h2>
               <span class="info-icon" aria-label="Open Access">🌐</span> What is
               Open Access?
@@ -85,17 +232,17 @@
             <p>
               Books available for everyone, free of charge and restrictions.
             </p>
-          </div>
-          <div class="info-card">
+          </article>
+          <article class="info-card">
             <h2>
               <span class="info-icon" aria-label="User">👤</span> For Users
             </h2>
             <p>
               Browse and read books without registration. Access the public
-              catalog.
+              catalog freely.
             </p>
-          </div>
-          <div class="info-card">
+          </article>
+          <article class="info-card">
             <h2>
               <span class="info-icon" aria-label="Admin">🛡️</span> For
               Administrators
@@ -103,23 +250,30 @@
             <p>
               Manage the catalog: add, edit, and delete books after logging in.
             </p>
-          </div>
+          </article>
         </div>
       </section>
-      <section id="public-books-section">
-        <h2>
+
+      <section id="public-books-section" aria-labelledby="featured-heading">
+        <h2 id="featured-heading">
           <span class="section-icon" aria-label="Featured">⭐</span> Featured
           Books
         </h2>
-        <div id="public-books-list"></div>
+        <div id="public-books-list" role="list"></div>
       </section>
-      <!-- Admin access now only available via menu link to admin.html -->
     </main>
-    <footer>
-      <p>
-        &copy; 2025 Biblioteca Digital
-      </p>
+
+    <footer role="contentinfo">
+      <p>&copy; 2025 Digital Library. All rights reserved.</p>
+      <nav aria-label="Footer navigation">
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Use</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
     </footer>
+
     <script src="scripts/login.js"></script>
+    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/featured-books.js" defer></script>
   </body>
 </html>

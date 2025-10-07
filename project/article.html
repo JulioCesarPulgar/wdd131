@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Article | Digital Library</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="" />
+    <meta property="article:published_time" content="" />
   </head>
   <body>
     <header>
@@ -39,18 +42,36 @@
           </div>
           <div id="rating-feedback"></div>
         </section>
-        <section id="article-comments">
-          <h2>Comments</h2>
+        <section id="article-comments" class="comments-section">
+          <h2>Comments (<span id="comment-count">0</span>)</h2>
+
           <form id="comment-form">
-            <textarea
-              id="comment-text"
-              rows="2"
-              required
-              placeholder="Leave a comment..."
-            ></textarea>
-            <button type="submit">Submit</button>
+            <div class="form-group">
+              <label for="comment-name">Name (optional)</label>
+              <input type="text" id="comment-name" placeholder="Anonymous" />
+            </div>
+
+            <div class="form-group">
+              <label for="comment-text">Your comment</label>
+              <textarea
+                id="comment-text"
+                rows="4"
+                required
+                placeholder="Share your thoughts..."
+                maxlength="500"
+              ></textarea>
+              <span class="char-count">0/500</span>
+            </div>
+
+            <button type="submit" class="btn-primary">Post Comment</button>
           </form>
-          <ul id="comments-list"></ul>
+
+          <div id="comments-container">
+            <ul id="comments-list"></ul>
+            <div id="no-comments" style="display: none">
+              <p>No comments yet. Be the first to comment!</p>
+            </div>
+          </div>
         </section>
       </section>
     </main>
