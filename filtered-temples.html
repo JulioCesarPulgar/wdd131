@@ -3,30 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filtered Temples</title>
+    <meta
+      name="description"
+      content="Explore temples of The Church of Jesus Christ of Latter-day Saints with filtering options for old, new, large and small temples."
+    />
+    <meta
+      name="keywords"
+      content="temples, church, LDS, filter, old, new, large, small"
+    />
+    <meta name="author" content="Temples of the Church" />
+    <title>Temples of The Church | Filtered Temple Directory</title>
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/filtered-temples.css" />
   </head>
   <body>
-    <header>
+    <header role="banner">
       <h1>Temples of the Church</h1>
-      <nav>
-        <button class="filter-btn" data-filter="home">Home</button>
-        <button class="filter-btn" data-filter="old">Old</button>
-        <button class="filter-btn" data-filter="new">New</button>
-        <button class="filter-btn" data-filter="large">Large</button>
-        <button class="filter-btn" data-filter="small">Small</button>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="filter-list">
+          <li>
+            <button class="filter-btn" data-filter="home" type="button">
+              Home
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" data-filter="old" type="button">
+              Old
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" data-filter="new" type="button">
+              New
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" data-filter="large" type="button">
+              Large
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" data-filter="small" type="button">
+              Small
+            </button>
+          </li>
+        </ul>
       </nav>
     </header>
-    <main>
-      <div id="temples-container" class="temples-container"></div>
+
+    <main role="main">
+      <section
+        id="temples-container"
+        class="temples-container"
+        aria-label="Temples gallery"
+      >
+        <!-- Dynamic content will be inserted here -->
+      </section>
     </main>
-    <footer>
+
+    <footer role="contentinfo">
       <p>
         &copy; <span id="year"></span> | Last Modified:
         <span id="lastModified"></span>
       </p>
     </footer>
+
     <script src="scripts/filtered-temples.js"></script>
   </body>
 </html>

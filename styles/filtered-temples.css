@@ -1,50 +1,207 @@
-/* filtered-temples.css - styles for filtered temples page */
+/* filtered-temples.css - enhanced styles for filtered temples page */
 
 .temples-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+  padding: 1rem 0;
 }
 
 .temple-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 1rem;
-  margin: 1rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
   max-width: 320px;
   min-width: 250px;
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s;
-}
-.temple-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-.temple-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-.temple-card h2 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-  text-align: center;
-}
-.temple-card p {
-  margin: 0.25rem 0;
-  font-size: 1rem;
-  text-align: center;
+  transition: var(--transition);
+  border-left: 3px solid var(--secondary);
+  animation: fadeIn 0.6s ease-out;
 }
 
-@media (max-width: 600px) {
+.temple-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.temple-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+  transition: var(--transition);
+}
+
+.temple-card:hover img {
+  transform: scale(1.02);
+}
+
+.temple-card h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  text-align: center;
+  color: var(--primary);
+  position: relative;
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+.temple-card h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+.temple-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--primary);
+  line-height: 1.6;
+  width: 100%;
+}
+
+/* Filter navigation styles */
+.filter-list {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.filter-btn {
+  text-decoration: none;
+  color: var(--primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  outline: none;
+}
+
+.filter-btn:hover::before,
+.filter-btn:focus::before {
+  opacity: 1;
+}
+
+.filter-btn.active {
+  color: var(--white);
+  background: var(--primary);
+}
+
+.filter-btn.active::before {
+  opacity: 1;
+}
+
+/* Staggered animation for temple cards */
+.temple-card:nth-child(1) { animation-delay: 0.1s; }
+.temple-card:nth-child(2) { animation-delay: 0.2s; }
+.temple-card:nth-child(3) { animation-delay: 0.3s; }
+.temple-card:nth-child(4) { animation-delay: 0.4s; }
+.temple-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .temples-container {
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+  
   .temple-card {
-    max-width: 95vw;
+    max-width: 100%;
+    min-width: 280px;
+    padding: 1.2rem;
+  }
+  
+  .filter-list {
+    gap: 0.8rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .temple-card {
     min-width: 90vw;
     margin: 0.5rem 0;
   }
+  
+  .filter-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Loading state */
+.temples-container.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Empty state */
+.temples-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.temples-empty p {
+  margin-bottom: 1rem;
 }
