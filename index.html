@@ -1,42 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WDD 131 – Dynamic Web Fundamentals – Julio Cesar Pulgar</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals, Julio Cesar Pulgar, HTML, CSS, JavaScript, Web Development, Dynamic Web Fundamentals" />
+    <title>
+      WDD 131 – Dynamic Web Fundamentals – Julio Cesar Pulgar | Portfolio
+    </title>
+    <meta
+      name="description"
+      content="Portfolio personal de Julio Cesar Pulgar - Estudiante de WDD 131: Dynamic Web Fundamentals. Desarrollador web apasionado de Venezuela."
+    />
+    <meta
+      name="keywords"
+      content="WDD 131, Dynamic Web Fundamentals, Julio Cesar Pulgar, desarrollo web, Venezuela, portfolio, HTML, CSS, JavaScript"
+    />
     <meta name="author" content="Julio Cesar Pulgar" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Story+Script&display=swap" rel="stylesheet">
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./styles/base.css" />
-    <script src="./scripts/getdates.js" defer></script>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="preload" as="image" href="./images/profile.jpg" />
+    <link rel="preload" as="image" href="./images/favorite-place.jpg" />
   </head>
   <body>
     <header>
       <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
       <nav>
-        <a href="https://www.linkedin.com/in/pulgarjuliocesar/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://byupw.instructure.com" target="_blank" rel="noopener">Canvas</a>
-        <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/prov/3?lang=eng&id=p5-p6#p5" target="_blank" rel="noopener">Scripture</a>
-        <a href="#">Final Project</a>
+        <a
+          href="https://www.linkedin.com/in/pulgarjuliocesar/"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://byupw.instructure.com" target="_blank" rel="noopener">
+          <i class="fas fa-graduation-cap"></i> Canvas
+        </a>
+        <a
+          href="https://www.churchofjesuschrist.org/study/scriptures/ot/prov/3?lang=eng&id=p5-p6#p5"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fas fa-book"></i> Scripture
+        </a>
+        <a href="./project/index.html">
+          <i class="fas fa-project-diagram"></i> Final Project
+        </a>
       </nav>
     </header>
+
     <main>
       <h1>Julio Cesar Pulgar</h1>
+
       <section class="card">
-        <h2>About Me</h2>
-        <img src="./images/profile.jpg" alt="Julio Cesar Pulgar profile photo" width="120" height="120">
-        <p>Hello! I'm Julio Cesar Pulgar from Venezuela. I am passionate about web development and always eager to learn new technologies. Welcome to my WDD 131 portfolio page!</p>
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <img
+          src="./images/profile.jpg"
+          alt="Julio Cesar Pulgar profile photo"
+          width="120"
+          height="120"
+        />
+        <p>
+          Hello! I'm Julio Cesar Pulgar from Venezuela. I am passionate about
+          web development and always eager to learn new technologies. Welcome to
+          my WDD 131 portfolio page!
+        </p>
       </section>
+
       <section class="card">
-        <h2>My Favorite Place</h2>
-        <img src="./images/favorite-place.jpg" alt="Favorite place in Venezuela" width="120" height="120">
-        <p>One of my favorite places is Mérida, Venezuela. The beautiful mountains and vibrant culture make it a wonderful place to visit and live.</p>
+        <h2><i class="fas fa-heart"></i> My Favorite Place</h2>
+        <img
+          src="./images/favorite-place.jpg"
+          alt="Favorite place in Venezuela"
+          width="120"
+          height="120"
+        />
+        <p>
+          One of my favorite places is Mérida, Venezuela. The beautiful
+          mountains and vibrant culture make it a wonderful place to visit and
+          live.
+        </p>
       </section>
     </main>
+
     <footer>
-      <p>&copy; <span id="currentyear"></span> Julio Cesar Pulgar, Venezuela</p>
-      <p id="lastModified"></p>
+      <p>
+        &copy; <span id="currentyear">2025</span> Julio Cesar Pulgar, Venezuela
+      </p>
+      <p id="lastModified">Last Modified:</p>
     </footer>
+
+    <script src="./scripts/getdates.js"></script>
   </body>
 </html>
