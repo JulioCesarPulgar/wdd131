@@ -3,26 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Contact Us | Digital Library</title>
-    <meta name="description" content="Get in touch with Digital Library. Send us your questions, feedback, or suggestions. We're here to help you." />
-    <meta name="keywords" content="contact, digital library, support, help, feedback" />
+    <title>Contact | Digital Library | Free Open Access Books Online</title>
+    <meta
+      name="description"
+      content="Explore thousands of free open access books in our digital library. Read online without registration, discover authors, literary genres and new releases."
+    />
+    <meta
+      name="keywords"
+      content="digital library, free books, open access, online books, free literature, ebooks, read online"
+    />
     <meta name="robots" content="index, follow" />
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com/contact.html" />
-    <meta property="og:title" content="Contact Us | Digital Library" />
-    <meta property="og:description" content="Get in touch with Digital Library. We're here to help." />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yourdomain.com/contact.html" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/contact.css" />
   </head>
@@ -43,11 +33,14 @@
         </a>
       </nav>
     </header>
-    
+
     <main role="main">
       <section class="contact-hero">
         <h1>Contact Us</h1>
-        <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        <p>
+          We'd love to hear from you. Send us a message and we'll respond as
+          soon as possible.
+        </p>
       </section>
 
       <section class="contact-container">
@@ -55,37 +48,44 @@
           <article class="info-box">
             <div class="info-icon">📧</div>
             <h2>Email</h2>
-            <p><a href="mailto:info@digitallibrary.com">info@digitallibrary.com</a></p>
+            <p>
+              <a href="mailto:#">info@digitallibrary.com</a>
+            </p>
           </article>
 
           <article class="info-box">
             <div class="info-icon">📞</div>
             <h2>Phone</h2>
-            <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            <p><a href="tel:xxxxxxx">+1 (XXX) 123-4567</a></p>
           </article>
 
           <article class="info-box">
             <div class="info-icon">📍</div>
             <h2>Address</h2>
-            <p>123 Library Street<br>Portland, OR 97201<br>United States</p>
+            <p>123 Library Street<br />Cabimas, ZU 4013<br />Venezuela</p>
           </article>
 
           <article class="info-box">
             <div class="info-icon">🕒</div>
             <h2>Hours</h2>
-            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+            <p>
+              Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 4:00
+              PM<br />Sunday: Closed
+            </p>
           </article>
         </div>
 
         <div class="contact-form-wrapper">
           <form id="contactForm" class="contact-form" novalidate>
             <div class="form-group">
-              <label for="name">Full Name <span class="required">*</span></label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                required 
+              <label for="name"
+                >Full Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
                 aria-required="true"
                 placeholder="John Doe"
               />
@@ -93,12 +93,14 @@
             </div>
 
             <div class="form-group">
-              <label for="email">Email Address <span class="required">*</span></label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
+              <label for="email"
+                >Email Address <span class="required">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
                 aria-required="true"
                 placeholder="john@example.com"
               />
@@ -107,9 +109,9 @@
 
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input 
-                type="tel" 
-                id="phone" 
+              <input
+                type="tel"
+                id="phone"
                 name="phone"
                 placeholder="+1 (555) 123-4567"
               />
@@ -117,7 +119,9 @@
             </div>
 
             <div class="form-group">
-              <label for="subject">Subject <span class="required">*</span></label>
+              <label for="subject"
+                >Subject <span class="required">*</span></label
+              >
               <select id="subject" name="subject" required aria-required="true">
                 <option value="">Select a subject</option>
                 <option value="general">General Inquiry</option>
@@ -131,12 +135,14 @@
             </div>
 
             <div class="form-group">
-              <label for="message">Message <span class="required">*</span></label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="6" 
-                required 
+              <label for="message"
+                >Message <span class="required">*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
                 aria-required="true"
                 placeholder="Write your message here..."
               ></textarea>
@@ -145,22 +151,22 @@
 
             <div class="form-group checkbox-group">
               <label>
-                <input 
-                  type="checkbox" 
-                  id="newsletter" 
-                  name="newsletter"
-                />
+                <input type="checkbox" id="newsletter" name="newsletter" />
                 <span>Subscribe to our newsletter</span>
               </label>
             </div>
 
             <button type="submit" class="submit-btn">
               <span class="btn-text">Send Message</span>
-              <span class="btn-loader" style="display: none;">Sending...</span>
+              <span class="btn-loader" style="display: none">Sending...</span>
             </button>
           </form>
 
-          <div id="successMessage" class="success-message" style="display: none;">
+          <div
+            id="successMessage"
+            class="success-message"
+            style="display: none"
+          >
             <div class="success-icon">✓</div>
             <h3>Message Sent Successfully!</h3>
             <p>Thank you for contacting us. We'll get back to you soon.</p>
@@ -177,7 +183,10 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>All books in our catalog are freely accessible. Simply browse our catalog and click on any book to start reading online.</p>
+              <p>
+                All books in our catalog are freely accessible. Simply browse
+                our catalog and click on any book to start reading online.
+              </p>
             </div>
           </article>
 
@@ -187,7 +196,10 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>No registration is required to read books. However, administrators need to log in to manage the catalog.</p>
+              <p>
+                No registration is required to read books. However,
+                administrators need to log in to manage the catalog.
+              </p>
             </div>
           </article>
 
@@ -197,7 +209,10 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>Yes! We welcome suggestions. Please use the contact form above with "Suggestion" as the subject and include the book details.</p>
+              <p>
+                Yes! We welcome suggestions. Please use the contact form above
+                with "Suggestion" as the subject and include the book details.
+              </p>
             </div>
           </article>
 
@@ -207,22 +222,23 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-              <p>We typically respond to inquiries within 24-48 hours during business days.</p>
+              <p>
+                We typically respond to inquiries within 24-48 hours during
+                business days.
+              </p>
             </div>
           </article>
         </div>
       </section>
     </main>
-    
+
     <footer role="contentinfo">
       <p>&copy; 2025 Digital Library. All rights reserved.</p>
       <nav aria-label="Footer navigation">
-        <a href="privacy.html">Privacy Policy</a> |
-        <a href="terms.html">Terms of Use</a> |
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
     </footer>
-    
+
     <script src="scripts/contact.js"></script>
   </body>
 </html>
