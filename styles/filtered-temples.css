@@ -139,11 +139,21 @@
 }
 
 /* Staggered animation for temple cards */
-.temple-card:nth-child(1) { animation-delay: 0.1s; }
-.temple-card:nth-child(2) { animation-delay: 0.2s; }
-.temple-card:nth-child(3) { animation-delay: 0.3s; }
-.temple-card:nth-child(4) { animation-delay: 0.4s; }
-.temple-card:nth-child(5) { animation-delay: 0.5s; }
+.temple-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.temple-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.temple-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.temple-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.temple-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -151,17 +161,17 @@
     gap: 1rem;
     padding: 0.5rem 0;
   }
-  
+
   .temple-card {
     max-width: 100%;
     min-width: 280px;
     padding: 1.2rem;
   }
-  
+
   .filter-list {
     gap: 0.8rem;
   }
-  
+
   .filter-btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -173,13 +183,13 @@
     min-width: 90vw;
     margin: 0.5rem 0;
   }
-  
+
   .filter-list {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .filter-btn {
     width: 100%;
     max-width: 200px;
